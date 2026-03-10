@@ -1,4 +1,4 @@
-# Slideshow New-Format Specification (Final)
+# Slideshow New-Format Specification
 
 This document defines the final, approved slideshow pipeline and style for this project.
 Use this as the source of truth for future edits.
