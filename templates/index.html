@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Social Slideshow UI</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Social Slideshow UI</h1>
+        <p>Batch slideshows with live preview and timestamped saves.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Global Settings</h2>
+        <div class="grid">
+          <label>
+            Aspect Ratio
+            <select id="aspectRatio">
+              <option value="9:16">9:16</option>
+              <option value="3:4" selected>3:4</option>
+              <option value="4:5">4:5</option>
+              <option value="1:1">1:1</option>
+              <option value="4:3">4:3</option>
+            </select>
+          </label>
+          <label>
+            Cover Title Size
+            <input id="coverTitleSize" type="number" min="20" max="120" value="65" />
+          </label>
+          <label>
+            Cover Subtitle Size
+            <input id="coverSubtitleSize" type="number" min="16" max="100" value="45" />
+          </label>
+          <label>
+            Content Size
+            <input id="contentSize" type="number" min="16" max="100" value="45" />
+          </label>
+        </div>
+        <div class="grid">
+          <label>
+            opsz (12-36)
+            <input id="opsz" type="number" min="12" max="36" value="36" />
+          </label>
+          <label>
+            wdth (75-150)
+            <input id="wdth" type="number" min="75" max="150" value="100" />
+          </label>
+          <label>
+            wght (300-900)
+            <input id="wght" type="number" min="300" max="900" value="600" />
+          </label>
+          <label>
+            slnt (-6 to 0)
+            <input id="slnt" type="number" min="-6" max="0" value="0" />
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Image Selection</h2>
+        <div class="grid">
+          <label class="inline">
+            <input id="randomHooks" type="checkbox" checked />
+            Random hook image
+          </label>
+          <label class="inline">
+            <input id="randomSlides" type="checkbox" checked />
+            Random slide images
+          </label>
+          <label class="inline">
+            <input id="randomDemos" type="checkbox" checked />
+            Random demo image
+          </label>
+          <label class="inline">
+            <input id="useDemoImageForLast" type="checkbox" checked />
+            Use demo image for last slide
+          </label>
+        </div>
+        <div class="grid">
+          <label>
+            Hook Image
+            <select id="hookImage" disabled></select>
+          </label>
+          <label>
+            Slide Images
+            <select id="slideImages" multiple size="6" disabled></select>
+          </label>
+          <label>
+            Demo Image
+            <select id="demoImage" disabled></select>
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Slideshows</h2>
+        <div class="grid">
+          <label>
+            Number of slideshows
+            <input id="showCount" type="number" min="1" max="50" value="1" />
+          </label>
+          <label>
+            Slides per show
+            <input id="slidesPerShow" type="number" min="2" max="20" value="5" />
+          </label>
+          <button id="applyCount">Apply</button>
+        </div>
+        <div id="shows"></div>
+        <button id="saveBatch" class="primary">Save Batch</button>
+        <div id="saveStatus" class="status"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Live Preview</h2>
+        <div class="grid">
+          <label>
+            Preview Folder
+            <select id="previewFolder">
+              <option value="hooks">hooks</option>
+              <option value="slides" selected>slides</option>
+              <option value="demos">demos</option>
+            </select>
+          </label>
+          <label>
+            Preview Image
+            <select id="previewImage"></select>
+          </label>
+          <label>
+            Slide Type
+            <select id="previewSlideType">
+              <option value="cover">cover</option>
+              <option value="content" selected>content</option>
+            </select>
+          </label>
+        </div>
+        <div class="grid">
+          <label>
+            Title
+            <input id="previewTitle" type="text" />
+          </label>
+          <label>
+            Subtitle
+            <input id="previewSubtitle" type="text" />
+          </label>
+          <label>
+            Body
+            <input id="previewBody" type="text" />
+          </label>
+          <label>
+            Reality
+            <input id="previewReality" type="text" />
+          </label>
+        </div>
+        <button id="runPreview">Generate Preview</button>
+        <div class="preview">
+          <img id="previewImageTag" alt="Preview" />
+        </div>
+        <div id="previewStatus" class="status"></div>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

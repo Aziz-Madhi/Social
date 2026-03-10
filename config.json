@@ -1,0 +1,39 @@
+{
+  "font": {
+    "cover_title": 50,
+    "cover_subtitle": 38,
+    "content": 45,
+    "weight": 600,
+    "width": 100,
+    "optical_size": 36,
+    "slant": 0
+  },
+  "text_position": "center",
+  "max_width": {
+    "cover_title": 0.85,
+    "cover_subtitle": 0.82,
+    "content": 0.85
+  },
+  "spacing": {
+    "cover_subtitle_gap": 0.35,
+    "title_body_gap": 0.8,
+    "body_reality_gap": 0.8
+  },
+  "stroke": {
+    "width": 2,
+    "color": "black",
+    "fill": "white"
+  },
+  "aspect_ratio": "3:4",
+  "folders": {
+    "hooks": "raw_images/hooks",
+    "slides": "raw_images/slides",
+    "demo": "raw_images/demos/mood",
+    "output": "ready_to_post"
+  },
+  "output_quality": {
+    "min_width": 1080,
+    "jpeg_quality": 100,
+    "subsampling": 0
+  }
+}

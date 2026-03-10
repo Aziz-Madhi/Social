@@ -1,0 +1,188 @@
+{
+  "hook": {
+    "title": "Physical symptoms I didn't realize were actually caused by anxiety",
+    "subtitle": "(and how my therapist taught me to deal with them.)"
+  },
+  "slideshows": [
+    {
+      "name": "Morning Dread (Cortisol Anxiety)",
+      "slides": [
+        {
+          "title": "Waking up with immediate dread.",
+          "body": "The Lie: \"I just hate mornings.\"",
+          "reality": "The Reality: My cortisol was spiking the second I opened my eyes. My body was reacting to the day like it was a tiger."
+        },
+        {
+          "title": "Staying in bed for hours on my phone.",
+          "body": "The Lie: \"I'm just lazy and slow.\"",
+          "reality": "The Reality: It was \"functional freeze.\" I was too overwhelmed to start, so I scrolled to numb the panic."
+        },
+        {
+          "title": "Feeling nauseous before breakfast.",
+          "body": "The Lie: \"I'm not a breakfast person.\"",
+          "reality": "The Reality: Anxiety diverts blood away from your stomach. I literally couldn't digest food because my body sensed danger."
+        },
+        {
+          "title": "Rushing but getting nowhere.",
+          "body": "The Lie: \"I have poor time management.\"",
+          "reality": "The Reality: My brain was moving so fast it couldn't focus on one task. I was running on adrenaline, not focus."
+        },
+        {
+          "title": "What actually helped",
+          "body": "I stopped checking emails from bed. That was just fueling the fire. Now, I take two minutes to just open Nafsy and tap out how I'm feeling.",
+          "reality": "Getting the dread out of my head and onto a screen makes it feel manageable, not monstrous."
+        }
+      ]
+    },
+    {
+      "name": "Functional Freeze (The Couch Lock)",
+      "slides": [
+        {
+          "title": "Scrolling for 3 hours without enjoying it.",
+          "body": "The Lie: \"I'm just decompressing.\"",
+          "reality": "The Reality: I wanted to get up, but I physically couldn't. My nervous system slammed on the brakes to protect me."
+        },
+        {
+          "title": "Procrastinating tiny tasks (like showering).",
+          "body": "The Lie: \"I'll do it in 5 minutes.\"",
+          "reality": "The Reality: The transition felt unsafe. Staying still felt like the only safe option."
+        },
+        {
+          "title": "Brain fog / Zoning out.",
+          "body": "The Lie: \"I'm just tired.\"",
+          "reality": "The Reality: My brain hit \"shutdown\" mode because the internal pressure was too high."
+        },
+        {
+          "title": "Shame spiraling while sitting still.",
+          "body": "The Lie: \"I am wasting my life.\"",
+          "reality": "The Reality: You aren't wasting life; you are surviving a nervous system crash."
+        },
+        {
+          "title": "How I melt the ice",
+          "body": "Forcing myself to move never worked. It just added shame. I started just admitting it. I log \"I feel stuck\" into Nafsy.",
+          "reality": "Weirdly, just naming the freeze without judging it usually gives me just enough energy to put the phone down."
+        }
+      ]
+    },
+    {
+      "name": "Relationship Anxiety (Anxious Attachment)",
+      "slides": [
+        {
+          "title": "Analyzing their response time.",
+          "body": "The Lie: \"I just want to know when we're hanging out.\"",
+          "reality": "The Reality: A delayed text felt like abandonment. I was counting minutes to prove I was safe."
+        },
+        {
+          "title": "Creating problems to fix.",
+          "body": "The Lie: \"I just want us to communicate better.\"",
+          "reality": "The Reality: I was picking fights just to get a reaction. Any attention felt better than silence."
+        },
+        {
+          "title": "Shape-shifting into what they like.",
+          "body": "The Lie: \"We have so much in common!\"",
+          "reality": "The Reality: I was suppressing my real self because I didn't think the \"real me\" was lovable."
+        },
+        {
+          "title": "Over-functioning.",
+          "body": "The Lie: \"I love doing things for people.\"",
+          "reality": "The Reality: I was trying to make myself indispensable so they couldn't leave me."
+        },
+        {
+          "title": "Breaking the pattern",
+          "body": "I realized I was looking for them to soothe me, but that's an inside job. Now, when I feel the urge to double-text or spiral, I vent it into Nafsy first.",
+          "reality": "Usually, once I read it back, I realize I don't need to send it. I just needed to feel safe."
+        }
+      ]
+    },
+    {
+      "name": "The \"Let Down\" Effect (Weekend Anxiety)",
+      "slides": [
+        {
+          "title": "Weekend Migraines.",
+          "body": "The Lie: \"I must be dehydrated.\"",
+          "reality": "The Reality: My stress hormones dropped too fast on Friday night, causing my blood vessels to rapidly expand (pain)."
+        },
+        {
+          "title": "Feeling bored/uneasy when it's quiet.",
+          "body": "The Lie: \"I need to be productive.\"",
+          "reality": "The Reality: My body is addicted to stress chemicals. Calmness actually feels dangerous to me."
+        },
+        {
+          "title": "Sunday Scaries starting on Saturday.",
+          "body": "The Lie: \"I hate my job.\"",
+          "reality": "The Reality: It's anticipatory anxiety. I'm already bracing for the next hit of stress."
+        },
+        {
+          "title": "Getting a cold the moment I take a break.",
+          "body": "The Lie: \"Bad timing.\"",
+          "reality": "The Reality: Stress suppresses the immune system. When I finally stopped, my immune system crashed."
+        },
+        {
+          "title": "What actually helped",
+          "body": "I had to teach my body that \"safe\" doesn't mean \"boring.\" I use Nafsy to track my mood on weekends specifically.",
+          "reality": "It reminds me that I'm allowed to just exist without producing anything. It's a slow process, but it helps."
+        }
+      ]
+    },
+    {
+      "name": "Anger (The \"Explosive\" Anxiety)",
+      "slides": [
+        {
+          "title": "Snapping at people I love.",
+          "body": "The Lie: \"They are being so annoying.\"",
+          "reality": "The Reality: I was at capacity. They weren't annoying; I just had zero patience left to give."
+        },
+        {
+          "title": "Rage cleaning.",
+          "body": "The Lie: \"No one helps me around here.\"",
+          "reality": "The Reality: The clutter made me feel out of control. Cleaning was a frantic attempt to regain order."
+        },
+        {
+          "title": "Road rage / Impatience.",
+          "body": "The Lie: \"Everyone is an idiot.\"",
+          "reality": "The Reality: Being stuck in traffic made me feel trapped. It was a fight-or-flight response to restriction."
+        },
+        {
+          "title": "Sensory sensitivity.",
+          "body": "The Lie: \"Turn that TV down!\"",
+          "reality": "The Reality: My brain was over-processing sound. The noise wasn't loud; my nerves were raw."
+        },
+        {
+          "title": "The change",
+          "body": "I realized my anger was just a bodyguard for my anxiety. Instead of exploding, I started catching the \"overwhelm\" earlier.",
+          "reality": "I use Nafsy to vent the rage privately. It's better to scream into an app than at my family."
+        }
+      ]
+    },
+    {
+      "name": "Decision Paralysis",
+      "slides": [
+        {
+          "title": "Reading reviews for 45 minutes.",
+          "body": "The Lie: \"I want to find the best place.\"",
+          "reality": "The Reality: I was terrified of making a \"bad\" choice and regretting it."
+        },
+        {
+          "title": "Asking 5 people for their opinion.",
+          "body": "The Lie: \"I value their input.\"",
+          "reality": "The Reality: I didn't trust myself. I wanted someone else to take the blame if it went wrong."
+        },
+        {
+          "title": "\"I don't care, you pick.\"",
+          "body": "The Lie: \"I'm easygoing.\"",
+          "reality": "The Reality: I was so mentally drained that making one more choice felt physically painful."
+        },
+        {
+          "title": "Post-decision panic.",
+          "body": "The Lie: \"I should have picked the other one.\"",
+          "reality": "The Reality: Perfectionism. I believed there was a \"perfect\" choice that would save me from disappointment."
+        },
+        {
+          "title": "How I started trusting myself",
+          "body": "I realized the stakes were actually really low. It's just dinner. Now, when I feel the paralysis setting in, I just note it in Nafsy: \"I'm scared of getting this wrong.\"",
+          "reality": "Acknowledging the fear usually shrinks it enough for me to just... pick something."
+        }
+      ]
+    }
+  ]
+}

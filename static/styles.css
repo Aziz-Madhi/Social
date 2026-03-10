@@ -1,0 +1,148 @@
+:root {
+  --bg: #f6f3ef;
+  --panel: #fff7ef;
+  --text: #1a1a1a;
+  --accent: #1f6feb;
+  --border: #e2d7c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #fff7ea 0%, var(--bg) 45%, #efe6d8 100%);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+  color: #5b4636;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(62, 39, 11, 0.08);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: end;
+  margin-bottom: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  gap: 6px;
+}
+
+label.inline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  background: #fff;
+}
+
+button.primary {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+}
+
+.hint {
+  margin-top: 0;
+  font-size: 12px;
+  color: #6b5a46;
+}
+
+.preview {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.preview img {
+  max-width: 100%;
+  height: auto;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #5b4636;
+}
+
+#shows {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.show-item {
+  display: grid;
+  gap: 8px;
+}
+
+.show-item textarea {
+  width: 100%;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

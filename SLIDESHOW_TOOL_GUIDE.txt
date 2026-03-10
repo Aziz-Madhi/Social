@@ -1,0 +1,279 @@
+================================================================================
+                        SLIDESHOW TOOL DOCUMENTATION
+                         Social Media Image Generator
+================================================================================
+
+OVERVIEW
+--------
+This tool creates social media slideshows by overlaying text onto images.
+It's designed for Instagram/TikTok carousels with consistent styling.
+
+The workflow follows a "Brain + Hand" architecture:
+- Brain (You/LLM): Decides which text goes on which image, aspect ratio, etc.
+- Hand (Python Script): Executes the image processing and text rendering.
+
+
+================================================================================
+DIRECTORY STRUCTURE
+================================================================================
+
+/Social
+├── venv/                   # Python virtual environment
+├── fonts/                  # Font files (.ttf)
+│   └── TikTokSans-VariableFont_opsz,slnt,wdth,wght.ttf
+├── raw_images/             # Source photos (input)
+│   ├── hooks/              # Hook images (first slide)
+│   ├── slides/             # Content images (middle slides)
+│   └── demos/              # Demo/app promo images (last slide)
+├── ready_to_post/          # Processed images (output)
+├── slideshow_tool.py       # Core image processing functions
+├── auto_slideshow.py       # AUTOMATED slideshow generator (recommended)
+├── create_slideshow.py     # Manual batch processing script
+├── simple_tool.py          # Basic single-image tool
+├── activate.sh             # Virtual environment activation script
+└── requirements.txt        # Python dependencies (Pillow)
+
+
+================================================================================
+AUTOMATED FOLDER WORKFLOW (RECOMMENDED)
+================================================================================
+
+Place your images in the organized folders:
+
+    raw_images/
+    ├── hooks/      → Put hook images here (attention grabbers)
+    ├── slides/     → Put content images here (main slides)
+    └── demos/      → Put demo/app promo images here (call to action)
+
+When you run auto_slideshow.py:
+    - 1 image is picked from hooks/ → becomes Slide 1
+    - N images are picked from slides/ → become middle slides
+    - 1 image is picked from demos/ → becomes the last slide
+
+Images are selected RANDOMLY by default, so you can run multiple times
+for different combinations without manually specifying files.
+
+
+================================================================================
+TWO SLIDE TYPES
+================================================================================
+
+1. HOOK SLIDE (First slide - grabs attention)
+   -----------------------------------------
+   - Larger font size (65pt scaled)
+   - Text is VERTICALLY CENTERED
+   - Has title + subtitle
+   - Purpose: Stop the scroll, make people want to see more
+
+   Example:
+   - Title: "I thought I was just shy"
+   - Subtitle: "It was social anxiety"
+
+
+2. CONTENT SLIDES (Slides 2, 3, 4, etc.)
+   -------------------------------------
+   - Smaller uniform font size (45pt scaled)
+   - All text is the SAME SIZE (title = body)
+   - Has title + body + optional "The reality:" section
+   - Purpose: Deliver the actual content
+
+   Example:
+   - Title: "1. Planning my sentences"
+   - Body: "I'd rehearse my order before I walked in..."
+   - Reality: "The reality: I was trying to avoid embarrassment..."
+
+
+================================================================================
+FONT SETTINGS
+================================================================================
+
+Font:           TikTok Sans (Variable Font)
+Weight:         SemiBold (600)
+Stroke:         2px black outline (subtle, for readability)
+Alignment:      Center (horizontal)
+Letter Spacing: 0%
+
+Font sizes (at 1080px width baseline):
+- Hook title:      65pt
+- Hook subtitle:   45pt
+- Content text:    45pt (uniform for title + body)
+
+Sizes scale proportionally based on image width.
+
+
+================================================================================
+IMAGE QUALITY SETTINGS
+================================================================================
+
+To ensure crisp text:
+
+1. MINIMUM RESOLUTION
+   - All images are upscaled to at least 1080x1440 (for 3:4 ratio)
+   - Uses LANCZOS resampling for high-quality upscaling
+
+2. JPEG SETTINGS
+   - Quality: 100 (maximum)
+   - Subsampling: 0 (no chroma subsampling - prevents color blur around text)
+
+3. FONT RENDERING
+   - Uses rounded integer font sizes to avoid fractional scaling artifacts
+
+
+================================================================================
+SUPPORTED ASPECT RATIOS
+================================================================================
+
+Format      Ratio     Common Use
+------      -----     ----------
+9:16        Portrait  TikTok, Instagram Reels, Stories
+3:4         Portrait  Instagram carousel (recommended)
+4:5         Portrait  Instagram feed
+1:1         Square    Instagram feed
+4:3         Landscape General purpose
+
+Default: 3:4 (Instagram carousel standard)
+
+
+================================================================================
+HOW TO USE
+================================================================================
+
+STEP 1: Activate the virtual environment
+----------------------------------------
+    source /Users/azizmadhi/Downloads/Social/activate.sh
+
+    Or manually:
+    source /Users/azizmadhi/Downloads/Social/venv/bin/activate
+
+
+STEP 2: Prepare your images
+---------------------------
+    Place source images in: raw_images/
+
+
+STEP 3: Create a processing script (or use Python directly)
+-----------------------------------------------------------
+    See create_slideshow.py for a complete example.
+
+    Basic usage:
+
+    from slideshow_tool import process_slide
+
+    # Hook slide (slide 1)
+    process_slide(
+        input_path="raw_images/photo1.jpg",
+        output_path="ready_to_post/slide_01.jpg",
+        slide_type="cover",
+        texts={
+            "title": "Your hook title here",
+            "subtitle": "Your subtitle here"
+        },
+        aspect_ratio="3:4"
+    )
+
+    # Content slide (slides 2+)
+    process_slide(
+        input_path="raw_images/photo2.jpg",
+        output_path="ready_to_post/slide_02.jpg",
+        slide_type="content",
+        texts={
+            "title": "1. Your numbered title",
+            "body": "Your main content text here...",
+            "reality": "The reality: Your insight here..."  # Optional
+        },
+        aspect_ratio="3:4"
+    )
+
+
+STEP 4: Run your script
+-----------------------
+    python your_script.py
+
+
+STEP 5: Check output
+--------------------
+    Open ready_to_post/ folder to view your slides.
+
+
+================================================================================
+FUNCTION REFERENCE
+================================================================================
+
+process_slide(input_path, output_path, slide_type, texts, aspect_ratio="3:4")
+-----------------------------------------------------------------------------
+Main function to process a single slide.
+
+Parameters:
+    input_path    : str   - Path to source image
+    output_path   : str   - Path for output image (.jpg or .png)
+    slide_type    : str   - "cover" for hook, "content" for other slides
+    texts         : dict  - Text content (see below)
+    aspect_ratio  : str   - Format "W:H" (default "3:4")
+
+texts parameter for "cover" type:
+    {
+        "title": "Main hook text",
+        "subtitle": "Secondary text"  # Optional
+    }
+
+texts parameter for "content" type:
+    {
+        "title": "Numbered title (e.g., 1. Topic)",
+        "body": "Main paragraph content",
+        "reality": "The reality: insight..."  # Optional
+    }
+
+
+================================================================================
+CUSTOMIZATION
+================================================================================
+
+To modify font sizes:
+    Edit slideshow_tool.py, find the create_cover_slide() and
+    create_content_slide() functions. Adjust the title_size and body_size values.
+
+To change the font:
+    Replace the .ttf file in fonts/ folder and update FONT_PATH in
+    slideshow_tool.py.
+
+To change the stroke thickness:
+    Modify stroke_width value in create_cover_slide() and create_content_slide().
+
+To change minimum output resolution:
+    In process_slide(), modify min_width value (default: 1080).
+
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Problem: Text looks pixelated
+Solution: Ensure source images are high resolution, or the tool will upscale
+          them. For best results, use images at least 1080px wide.
+
+Problem: Font not loading
+Solution: Check that the font file exists in fonts/ folder and FONT_PATH
+          is correct in slideshow_tool.py.
+
+Problem: Text not visible on image
+Solution: The stroke (outline) should make text readable on any background.
+          If still hard to read, increase stroke_width.
+
+Problem: Wrong aspect ratio
+Solution: Pass the correct aspect_ratio parameter (e.g., "9:16" for TikTok).
+
+
+================================================================================
+DEPENDENCIES
+================================================================================
+
+Python 3.x
+Pillow (PIL) - pip install Pillow
+
+All dependencies are listed in requirements.txt.
+To reinstall: pip install -r requirements.txt
+
+
+================================================================================
+                              END OF DOCUMENTATION
+================================================================================
