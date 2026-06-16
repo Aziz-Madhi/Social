@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Slideshow Image Tool
+ScrollStop Image Tool
 Creates cover slides and content slides with proper text positioning.
 """
 
@@ -359,4 +359,4 @@ def process_slide(input_path, output_path, slide_type, texts, aspect_ratio="3:4"
     return output_path
 
 if __name__ == "__main__":
-    print("Slideshow tool loaded. Use process_slide() function.")
+    print("ScrollStop tool loaded. Use process_slide() function.")

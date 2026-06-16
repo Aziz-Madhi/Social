@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Local UI server for the Social slideshow tool.
+Local UI server for the ScrollStop carousel tool.
 """
 
 import base64

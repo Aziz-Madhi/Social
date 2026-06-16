@@ -1,11 +1,11 @@
 ================================================================================
-                        SLIDESHOW TOOL DOCUMENTATION
-                         Social Media Image Generator
+                        SCROLLSTOP TOOL DOCUMENTATION
+                         ScrollStop Carousel Generator
 ================================================================================
 
 OVERVIEW
 --------
-This tool creates social media slideshows by overlaying text onto images.
+This tool creates social media carousels by overlaying text onto images.
 It's designed for Instagram/TikTok carousels with consistent styling.
 
 The workflow follows a "Brain + Hand" architecture:
